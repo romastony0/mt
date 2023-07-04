@@ -1,0 +1,199 @@
+.plan-container {
+  width:500px;    
+  margin: 15px auto;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  -webkit-transition: all 1s;
+  background-color: #F9F5F5;  
+  transition: all 1s;
+}
+.plan-container .plan-header {
+  padding: 25px 0;
+  border-radius: 5px 5px 0 0;
+  background-color: #54ccb5;
+  text-align: center;
+}
+.plan-container .plan-header .icon-box {
+  margin: 0 auto;
+}
+.plan-container .plan-header .icon-box .icon {
+  font-size: 3.125em;
+  color: #447F71;
+}
+.plan-container .plan-header h2 {
+  color: #fff;
+  font-weight: lighter;
+  margin: 0;
+  padding-top: 0.625em;
+}
+.plan-container .plan-header p {
+  margin: 0;
+  color: #447F71;
+}
+.plan-container .plan-details {
+background-color: #f4f4f4;
+  margin: 0 auto;
+  padding: 10px;
+  background: url("http://raventools.com/wp-content/themes/raven-wp-theme-2014/images/plan-bottom-border.png") top center no-repeat;
+}
+.plan-container .plan-details ul {
+  padding-left: 0;
+  list-style: none;
+}
+.plan-container .plan-details ul li {
+  border-top: 2px solid #e8edef;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #5f5f5f;
+  
+}
+.plan-container .plan-details ul li:last-child {
+  border-bottom: 3px solid #e8edef;
+}
+.plan-container .plan-details ul li span {
+  font-weight: lighter;
+  color: #777777;
+}
+
+.plan-container .plan-details button {
+  background-color: #FF8939;
+  padding: 10px 0;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border: 0;
+  font-size: 25px;
+}
+.plan-container .plan-details button:hover {
+  background-color: #e67b33;
+}
+
+.tag .left_a 
+  { 
+  display: inline-block;      
+  margin-left: -12px;  
+  height:15px;
+  width:180px;
+  color:#000;
+  font-family:Arial;
+  font-size:15px;
+  float: left;
+  margin-top: 10px;
+  }
+  .tag .right_a 
+  { 
+  display: inline-block;      
+  margin-right: -12px;  
+  height:15px;
+  width:180px;
+  color:#000;
+  font-family:Arial;
+  font-size:15px;
+  float: right;
+  margin-top: 10px;
+  }
+
+@media (max-width: 991px){
+.plan-container {
+ width: 56.75em;
+}
+.plan-container .plan-header {
+  padding: 13px 0;
+}
+.plan-container .plan-header h2 {
+  font-size: 40px;
+}
+.plan-container .plan-details button {  
+  font-size: 28px;
+}
+.tag .left_a 
+  { 
+  margin-top: -12px;
+  width:310px;
+  margin-left: -8px;
+  font-size:30px;    
+  }
+  .tag .right_a 
+  { 
+  margin-top: -12px;
+  width:310px;
+  margin-right: -8px;
+  font-size:30px;    
+  }
+}
+
+@media (max-width: 640px){
+.plan-container {
+  width: 50.75em;
+}
+.plan-container .plan-header {
+   padding: 48px 0;
+}
+.plan-container .plan-details button {  
+  font-size: 28px;
+}
+.tag .left_a 
+  { 
+  margin-top: 2px;
+  width:230px;
+  margin-left: -8px;
+  font-size:30px;    
+  }
+  .tag .right_a 
+  { 
+  margin-top: 2px;
+  width:230px;
+  margin-right: -8px;
+  font-size:25px;    
+  }
+}
+
+@media (max-width: 480px){
+.plan-container {
+  width: 38.75em;
+}
+.plan-container .plan-details button {  
+  font-size: 35px;
+}
+.tag .left_a 
+  { 
+  margin-top: 2px;
+  width:230px;
+  margin-left: -8px;
+  font-size:25px;    
+  }
+  .tag .right_a 
+  { 
+  margin-top: 2px;
+  width:230px;
+  margin-right: -8px;
+  font-size:25px;    
+  }
+}
+
+
+@media (max-width: 320px){
+.plan-container {
+  width: 38.75em;
+}
+.plan-container .plan-details button {  
+  font-size: 35px;
+}
+.tag .left_a 
+  { 
+  margin-top: 2px;
+  width:230px;
+  margin-left: -8px;
+  font-size:25px;    
+  }
+  .tag .right_a 
+  { 
+  margin-top: 2px;
+  width:230px;
+  margin-right: -8px;
+  font-size:25px;    
+  }
+}

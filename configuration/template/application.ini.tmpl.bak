@@ -1,0 +1,29 @@
+[application]
+CHARGE_URL="http://hostname/sm/simulator/charge.php?"
+CONTENT_MGR_URL = "http://hostname/cm/gateway/action?"
+RENEWAL_CALLBACKURL = "http://hostname/sm/gateway/action?"
+BASE_URL= "http://hostname/sm/storage/upload/keywordbase/"
+VENDOR_MTUPDATE_URL = "http://hostname/cm/gateway/action?application=msg&action=updatevendortmt"
+VENDOR_STATUS_URL = "http://hostname/cm/gateway/action?application=msg&action=getvendorstat"
+MIN_NO_OF_JOBS = 5;
+MAX_NO_OF_THREADS = 10;
+MIN_MSISDN_DIGITS = 10;
+MAX_MSISDN_DIGITS = 10;
+COUNTRY_CODE = 91;
+ADMIN_USERGROUP = 1;
+
+DEV_MODE = 1;
+
+; This should be accessible from the billing Kannel server
+APPLICATION_URL = "http://hostname/sm/gateway/"
+
+CRON_ENTRY_FILE = "/var/www/html/sm/storage/cron/apachecron"
+SCHEDULER_SCRIPT_FILE = "/scripts/sm/sendcontent.sh"
+DB_DOWNLOAD_SHELL_SCRIPT = "/scripts/sm/download.sh"
+SCHEDULER_SCRIPT_FILE = "/scripts/sm/sendcontent.sh"
+
+CONTENT_MGR_GET_CONTENT_URL = "http://hostname/cm/gateway/action?application=group&action=listallgroups"
+CONTENT_MGR_SEND_CONTENT_URL = "http://hostname/cm/gateway/action?application=msg&action=contentDeliver&"
+DNDURL = "http://hostname/dnd/gateway/"
+CMURL = "http://hostname/cm/gateway/"
+BULKSMSURL = "http://hostname/bsg/gateway/"
