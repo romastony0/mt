@@ -188,8 +188,38 @@ $todate = date('Y-m-d 23:59:59', strtotime('now'));
                     echo "</tr>";
                     ?>
                 </table>
-                <H1>Romas</H1>
             </div>
         </main>
     </div>
+    <script>
+        // Check if all table data cells have a value of 0
+        function checkTableData() {
+            var table = document.querySelector('table'); // Assuming there is only one table in the document
+            var tableDataCells = table.querySelectorAll('td');
+            var descriptio = document.querySelector('i');
+            var allZero = true;
+
+            // Check if any table data cell has a value other than 0
+            for (var i = 0; i < tableDataCells.length; i++) {
+                if (tableDataCells[i].innerText !== '0') {
+                    allZero = false;
+                    break;
+                }
+            }
+
+            // Show table or "No results found" message based on the check result
+            if (allZero) {
+                var message = document.createElement('p');
+                message.textContent = 'No results found';
+                table.parentNode.replaceChild(message, table);
+                descriptio.style.display = 'none';
+            } else {
+                table.style.display = 'table';
+
+            }
+        }
+
+        // Call the function when the page finishes loading
+        window.addEventListener('load', checkTableData);
+    </script>
 </body>
