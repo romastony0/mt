@@ -5,11 +5,11 @@ ini_set('display_errors', 0);
 include_once("../framework/initialise/framework.init.php");
 date_default_timezone_set("Africa/Johannesburg");
 global $library, $request, $db, $curl, $libxml, $log, $viewclass, $mail;
-// $fromdate = "2023-06-30 00:00:00";
-// $todate = "2023-06-30 23:59:59";
+$fromdate = "2023-06-30 00:00:00";
+$todate = "2023-06-30 23:59:59";
 $today = date('Y-m-d');
-$fromdate = date('Y-m-d 00:00:00');
-$todate = date('Y-m-d 23:59:59', strtotime('now'));
+// $fromdate = date('Y-m-d 00:00:00');
+// $todate = date('Y-m-d 23:59:59', strtotime('now'));
 ?>
 
 <head>
@@ -141,8 +141,8 @@ $todate = date('Y-m-d 23:59:59', strtotime('now'));
                             $totalrevenue = $subscriptionrevenue + $renewalrevenue;
                             // Display agent statistics in HTML table cells
                             echo "<tr>";
-                            echo "<td>" . $row['agent_name'] . " (" . $row['agentid'] . ")</td>";
-                            echo "<td>" . $totalhitcount . "</td>";
+                            echo "<td style='font-weight: bold' >" . $row['agent_name'] . " (" . $row['agentid'] . ")</td>";
+                            echo "<td style='font-weight: bold' >" . $totalhitcount . "</td>";
                             echo "<td>" . $nonmalware . "</td>";
                             echo "<td>" . $malware . "</td>";
                             echo "<td>" . $rtcgCount . "</td>";
@@ -153,7 +153,7 @@ $todate = date('Y-m-d 23:59:59', strtotime('now'));
                             echo "<td>" . $deactivationcount . "</td>";
                             echo "<td>" . $subscriptionrevenue . "</td>";
                             echo "<td>" . $renewalrevenue . "</td>";
-                            echo "<td>" . $totalrevenue . "</td>";
+                            echo "<td style='font-weight: bold' >" . $totalrevenue . "</td>";
                             echo "</tr>";
                             // Update cumulative totals in the $totals array
                             $totals['Total Hits'] += $totalhitcount;
@@ -187,6 +187,7 @@ $todate = date('Y-m-d 23:59:59', strtotime('now'));
                     echo "<th>" . $totals['Total Revenue'] . "</th>";
                     echo "</tr>";
                     ?>
+
                 </table>
             </div>
         </main>
