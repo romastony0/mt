@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color Bars</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 200px;
+        background-color: #000;
+        border: 10px solid #000;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      .bar {
+        padding: 0px;
+        flex: 1;
+        margin: 0 0px;
+        transition: height 1s ease;
+      }
+      .bar-1 {
+        background-color: #7e48d0;
+      }
+      .bar-2 {
+        background-color: #d848aa;
+      }
+      .bar-3 {
+        background-color: #fc5a98;
+      }
+      .bar-4 {
+        background-color: #fc9073;
+      }
+      .bar-5 {
+        background-color: #dfbb4d;
+      }
+      .container-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .controls button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      #start {
+        background-color: #2f7c00;
+        color: #fff;
+      }
+      #stop {
+        background-color: #ff0011;
+        color: #fff;
+      }
+      #reset {
+        background-color: #cc00cc;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-bar">
+      <div class="box">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+        <div class="bar bar-4"></div>
+        <div class="bar bar-5"></div>
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+
+    <script>
+      var bars = document.querySelectorAll(".bar");
+      var startButton = document.getElementById("start");
+      var stopButton = document.getElementById("stop");
+      var resetButton = document.getElementById("reset");
+      var interval;
+
+      function randomizeHeights() {
+        bars.forEach(function (bar) {
+          var randomHeight = Math.floor(Math.random() * 150) + 20;
+          bar.style.height = randomHeight + "px";
+        });
+      }
+
+      function resetHeights() {
+        bars.forEach(function (bar) {
+          bar.style.height = "100%";
+        });
+      }
+
+      resetHeights();
+
+      resetButton.addEventListener("click", resetHeights);
+
+      startButton.addEventListener("click", function () {
+        randomizeHeights();
+        interval = setInterval(randomizeHeights, 1000);
+      });
+
+      stopButton.addEventListener("click", function () {
+        clearInterval(interval);
+      });
+    </script>
+  </body>
+</html>
